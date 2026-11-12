@@ -1,0 +1,22 @@
+:root {
+  --color-crema-claro: #FBF6EC;
+  --color-crema: #F3E6C8;
+  --color-tarjeta: #EADBB8;
+  --color-borde: #D9CBA8;
+  --color-carbon: #2A2A2A;
+  --color-texto-secundario: #6B655A;
+  --color-dorado: #D4A64A;        /* solo rellenos */
+  --color-dorado-texto: #8C6A1F;  /* precios, 24px o más */
+  --color-rojo: #B3282D;
+  --color-azul: #2E4A7D;
+  --color-pie-texto: #CFC6B2;
+  --color-pie-texto-secundario: #A9A296;
+
+  --fuente-titulos: 'DM Serif Display', Georgia, serif;
+  --fuente-rotulos: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  --fuente-texto: 'Barlow', system-ui, sans-serif;
+
+  --margen-lateral: 16px;
+  --espacio-seccion: 56px;
+  --alto-minimo-boton: 44px;
+}
