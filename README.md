@@ -22,13 +22,13 @@ Un sitio de una sola página, rápido y pensado primero para celular:
 
 ## Tecnologías
 
-| | |
-|---|---|
-| Framework | React 19 + TypeScript |
-| Herramienta de build | Vite |
-| Estilos | CSS Modules + variables CSS (tokens de diseño) |
-| Gestor de paquetes | pnpm |
-| Hosting | Estático (por definir) |
+|                      |                                                |
+| -------------------- | ---------------------------------------------- |
+| Framework            | React 19 + TypeScript                          |
+| Herramienta de build | Vite                                           |
+| Estilos              | CSS Modules + variables CSS (tokens de diseño) |
+| Gestor de paquetes   | pnpm                                           |
+| Hosting              | Estático (por definir)                         |
 
 ## Decisiones y su porqué
 
