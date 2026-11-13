@@ -1,16 +1,16 @@
 :root {
-  --color-crema-claro: #FBF6EC;
-  --color-crema: #F3E6C8;
-  --color-tarjeta: #EADBB8;
-  --color-borde: #D9CBA8;
-  --color-carbon: #2A2A2A;
-  --color-texto-secundario: #6B655A;
-  --color-dorado: #D4A64A;        /* solo rellenos */
-  --color-dorado-texto: #8C6A1F;  /* precios, 24px o más */
-  --color-rojo: #B3282D;
-  --color-azul: #2E4A7D;
-  --color-pie-texto: #CFC6B2;
-  --color-pie-texto-secundario: #A9A296;
+  --color-crema-claro: #fbf6ec;
+  --color-crema: #f3e6c8;
+  --color-tarjeta: #eadbb8;
+  --color-borde: #d9cba8;
+  --color-carbon: #2a2a2a;
+  --color-texto-secundario: #6b655a;
+  --color-dorado: #d4a64a; /* solo rellenos */
+  --color-dorado-texto: #8c6a1f; /* precios, 24px o más */
+  --color-rojo: #b3282d;
+  --color-azul: #2e4a7d;
+  --color-pie-texto: #cfc6b2;
+  --color-pie-texto-secundario: #a9a296;
 
   --fuente-titulos: 'DM Serif Display', Georgia, serif;
   --fuente-rotulos: 'Barlow Condensed', 'Arial Narrow', sans-serif;

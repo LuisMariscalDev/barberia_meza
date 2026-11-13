@@ -28,14 +28,14 @@ Reglas de trabajo para todos los que hacen commits en este repositorio.
 
 ## Nombres
 
-| Qué | Convención | Ejemplo |
-|---|---|---|
-| Variables y funciones | camelCase | `horarioBarbero`, `crearEnlaceWhatsApp` |
-| Componentes, tipos e interfaces | PascalCase | `Precios`, `Barbero` |
-| Constantes fijas | MAYUSCULAS_CON_GUION | `MENSAJE_PREDETERMINADO` |
-| Booleanos | prefijo `es`, `esta` o `tiene` | `estaAbierto`, `tieneFoto` |
-| Archivos de componentes | PascalCase | `Precios.tsx`, `Precios.module.css` |
-| Variables CSS | kebab-case | `--color-dorado` |
+| Qué                             | Convención                     | Ejemplo                                 |
+| ------------------------------- | ------------------------------ | --------------------------------------- |
+| Variables y funciones           | camelCase                      | `horarioBarbero`, `crearEnlaceWhatsApp` |
+| Componentes, tipos e interfaces | PascalCase                     | `Precios`, `Barbero`                    |
+| Constantes fijas                | MAYUSCULAS_CON_GUION           | `MENSAJE_PREDETERMINADO`                |
+| Booleanos                       | prefijo `es`, `esta` o `tiene` | `estaAbierto`, `tieneFoto`              |
+| Archivos de componentes         | PascalCase                     | `Precios.tsx`, `Precios.module.css`     |
+| Variables CSS                   | kebab-case                     | `--color-dorado`                        |
 
 Los nombres describen el dato que guardan. Sin abreviaturas (`btn`, `hor`, `datos2`).
 
