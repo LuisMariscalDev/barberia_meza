@@ -23,3 +23,10 @@ img {
   height: auto;
   display: block;
 }
+
+h1,
+h2,
+h3 {
+  font-family: var(--fuente-titulos);
+  font-weight: 400;
+}
