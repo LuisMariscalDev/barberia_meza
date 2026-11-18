@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { NEGOCIO, MENSAJE_PREDETERMINADO } from '../../data/negocio'
 import { crearEnlaceWhatsApp } from '../../lib/whatsapp'
 import estilos from './Encabezado.module.css'
@@ -13,15 +13,42 @@ const ENLACES = [
 
 export function Encabezado() {
   const [desplazado, setDesplazado] = useState(false)
+  const referencia = useRef<HTMLElement>(null)
   const whatsapp = crearEnlaceWhatsApp(NEGOCIO.telefono, MENSAJE_PREDETERMINADO)
 
   useEffect(() => {
-    const alDesplazar = () => setDesplazado(window.scrollY > 8)
+    let cuadro: number | null = null
 
-    alDesplazar()
+    const actualizar = () => {
+      const desplazamiento = window.scrollY
+      const recorrido =
+        document.documentElement.scrollHeight - window.innerHeight
+      const progreso =
+        recorrido > 0 ? Math.min(desplazamiento / recorrido, 1) : 0
+
+      referencia.current?.style.setProperty('--progreso', progreso.toFixed(4))
+      setDesplazado(desplazamiento > 8)
+    }
+
+    const alDesplazar = () => {
+      if (cuadro !== null) return
+
+      cuadro = window.requestAnimationFrame(() => {
+        cuadro = null
+        actualizar()
+      })
+    }
+
+    actualizar()
     window.addEventListener('scroll', alDesplazar, { passive: true })
+    window.addEventListener('resize', alDesplazar)
 
-    return () => window.removeEventListener('scroll', alDesplazar)
+    return () => {
+      window.removeEventListener('scroll', alDesplazar)
+      window.removeEventListener('resize', alDesplazar)
+
+      if (cuadro !== null) window.cancelAnimationFrame(cuadro)
+    }
   }, [])
 
   return (
@@ -30,7 +57,11 @@ export function Encabezado() {
         Saltar al contenido
       </a>
 
-      <header className={estilos.encabezado} data-desplazado={desplazado}>
+      <header
+        className={estilos.encabezado}
+        data-desplazado={desplazado}
+        ref={referencia}
+      >
         <div className={estilos.contenedor}>
           <a
             className={estilos.marca}
@@ -67,6 +98,8 @@ export function Encabezado() {
             <span aria-hidden="true">→</span>
           </a>
         </div>
+
+        <span className={estilos.progreso} aria-hidden="true" />
       </header>
     </>
   )
