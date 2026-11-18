@@ -1,0 +1,141 @@
+.seccion {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-rojo);
+  background-image: var(--textura-papel);
+  color: var(--color-crema-claro);
+  padding-block: clamp(72px, 10vw, 120px);
+}
+
+.marca {
+  position: absolute;
+  bottom: -0.28em;
+  left: 50%;
+  font-family: var(--fuente-rotulos);
+  font-size: clamp(9rem, 34vw, 26rem);
+  font-weight: 700;
+  line-height: 0.7;
+  letter-spacing: -0.02em;
+  color: var(--color-crema-claro);
+  opacity: 0.07;
+  pointer-events: none;
+  transform: translateX(-50%);
+  user-select: none;
+  white-space: nowrap;
+}
+
+.contenedor {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  justify-items: center;
+  gap: 18px;
+  width: min(calc(100% - var(--margen-lateral) * 2), var(--ancho-contenido));
+  margin-inline: auto;
+  text-align: center;
+}
+
+.etiqueta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--fuente-rotulos);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--color-crema-claro) 82%, var(--color-rojo));
+}
+
+.etiqueta::before {
+  content: '';
+  flex: none;
+  width: 26px;
+  height: 1px;
+  background: var(--color-dorado);
+}
+
+.titulo {
+  font-size: clamp(2.6rem, 8vw, 4.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.01em;
+}
+
+.titulo em {
+  font-style: italic;
+  color: var(--color-dorado);
+}
+
+.entrada {
+  max-width: 48ch;
+  font-size: 17px;
+  color: color-mix(in oklab, var(--color-crema-claro) 88%, var(--color-rojo));
+}
+
+.acciones {
+  display: grid;
+  gap: 10px;
+  width: 100%;
+  max-width: 420px;
+  margin-top: 10px;
+}
+
+.boton,
+.botonSecundario {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  padding-inline: 24px;
+  font-family: var(--fuente-rotulos);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    background-color var(--duracion) var(--curva),
+    border-color var(--duracion) var(--curva),
+    color var(--duracion) var(--curva);
+}
+
+.boton {
+  background: var(--color-crema-claro);
+  border: 1px solid var(--color-crema-claro);
+  color: var(--color-carbon);
+}
+
+.boton span {
+  transition: transform var(--duracion) var(--curva);
+}
+
+.boton:hover {
+  background: var(--color-carbon);
+  border-color: var(--color-carbon);
+  color: var(--color-crema-claro);
+}
+
+.boton:hover span {
+  transform: translateX(4px);
+}
+
+.botonSecundario {
+  background: transparent;
+  border: 1px solid
+    color-mix(in oklab, var(--color-crema-claro) 55%, transparent);
+  color: var(--color-crema-claro);
+}
+
+.botonSecundario:hover {
+  background: var(--color-crema-claro);
+  border-color: var(--color-crema-claro);
+  color: var(--color-rojo);
+}
+
+@media (min-width: 560px) {
+  .acciones {
+    grid-template-columns: 1fr 1fr;
+    max-width: 560px;
+  }
+}
