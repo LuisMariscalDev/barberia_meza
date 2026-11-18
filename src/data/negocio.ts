@@ -5,7 +5,7 @@ export const NEGOCIO: Negocio = {
   nombre: 'Barbería Meza',
   ciudad: 'Las Juntas',
   estado: 'Jalisco',
-  precioCorte: 150,
+  precioCorte: 200,
   moneda: 'MXN',
   telefono: '523300000000',
   direccion: 'Av. Juárez 000, Las Juntas',

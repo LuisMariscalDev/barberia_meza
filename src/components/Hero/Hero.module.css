@@ -14,6 +14,8 @@
   );
   opacity: 0.75;
   pointer-events: none;
+  translate: calc(var(--puntero-x, 0) * -10px) calc(var(--puntero-y, 0) * -7px);
+  transition: translate 900ms var(--curva);
 }
 
 .franja {
@@ -29,6 +31,68 @@
     var(--color-azul) 18px 30px,
     var(--color-crema-claro) 30px 36px
   );
+  animation: deslizarFranja 26s linear infinite;
+}
+
+.polvo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  translate: calc(var(--puntero-x, 0) * -10px) calc(var(--puntero-y, 0) * -7px);
+  transition: translate 900ms var(--curva);
+}
+
+.polvo span {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: var(--color-dorado);
+  opacity: 0;
+  transform: rotate(45deg);
+  animation: flotarPolvo 14s ease-in-out infinite;
+}
+
+.polvo span:nth-child(1) {
+  top: 30%;
+  left: 6%;
+  animation-delay: -1s;
+  animation-duration: 13s;
+}
+
+.polvo span:nth-child(2) {
+  top: 66%;
+  left: 17%;
+  animation-delay: -4s;
+  animation-duration: 16s;
+}
+
+.polvo span:nth-child(3) {
+  top: 16%;
+  left: 38%;
+  animation-delay: -7s;
+  animation-duration: 15s;
+}
+
+.polvo span:nth-child(4) {
+  top: 74%;
+  left: 56%;
+  animation-delay: -2.5s;
+  animation-duration: 14s;
+}
+
+.polvo span:nth-child(5) {
+  top: 42%;
+  left: 79%;
+  animation-delay: -6s;
+  animation-duration: 17s;
+}
+
+.polvo span:nth-child(6) {
+  top: 64%;
+  left: 92%;
+  animation-delay: -9s;
+  animation-duration: 12s;
 }
 
 .contenedor {
@@ -67,6 +131,8 @@
   width: 28px;
   height: 2px;
   background: var(--color-dorado);
+  transform-origin: left;
+  animation: trazarLinea 700ms var(--curva) 140ms backwards;
 }
 
 .titulo {
@@ -92,7 +158,7 @@
   letter-spacing: -0.015em;
 }
 
-.sello {
+.selloFlotante {
   display: none;
 }
 
@@ -191,10 +257,16 @@
   transform: rotate(45deg);
 }
 
-.boleta {
-  position: relative;
+.boletaFlotante {
   justify-self: center;
   width: min(100%, 380px);
+  translate: calc(var(--puntero-x, 0) * 5px) calc(var(--puntero-y, 0) * 4px);
+  transition: translate 600ms var(--curva);
+  animation: flotarBoleta 10s ease-in-out 1.4s infinite;
+}
+
+.boleta {
+  position: relative;
   padding: 30px 28px 26px;
   background-color: var(--color-crema-claro);
   border: 1.5px solid var(--color-carbon);
@@ -369,10 +441,17 @@
 }
 
 @media (min-width: 620px) {
-  .sello {
+  .selloFlotante {
     position: absolute;
     top: 12px;
     right: 0;
+    display: block;
+    translate: calc(var(--puntero-x, 0) * -7px) calc(var(--puntero-y, 0) * -5px);
+    transition: translate 600ms var(--curva);
+    animation: flotarSello 9s ease-in-out 1.6s infinite;
+  }
+
+  .sello {
     display: grid;
     place-content: center;
     width: 104px;
@@ -392,6 +471,7 @@
     text-transform: uppercase;
     opacity: 0.92;
     transform: rotate(-8deg);
+    animation: sellar 650ms var(--curva) 520ms backwards;
   }
 
   .sello span {
@@ -407,13 +487,94 @@
     padding-block: 72px 96px;
   }
 
-  .boleta {
+  .boletaFlotante {
     justify-self: end;
   }
 }
 
 @media (min-width: 900px) and (max-width: 1099px) {
-  .sello {
+  .selloFlotante {
+    display: none;
+  }
+}
+
+@keyframes deslizarFranja {
+  to {
+    background-position: 0 -36px;
+  }
+}
+
+@keyframes flotarPolvo {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 8px, 0) rotate(45deg);
+  }
+
+  35% {
+    opacity: 0.42;
+  }
+
+  65% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(4px, -18px, 0) rotate(45deg);
+  }
+}
+
+@keyframes flotarBoleta {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -6px, 0);
+  }
+}
+
+@keyframes flotarSello {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+
+  50% {
+    transform: translate3d(0, -4px, 0) rotate(0.8deg);
+  }
+}
+
+@keyframes sellar {
+  from {
+    opacity: 0;
+    transform: rotate(-16deg) scale(1.25);
+  }
+}
+
+@keyframes trazarLinea {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .franja,
+  .polvo span,
+  .selloFlotante,
+  .sello,
+  .boletaFlotante,
+  .boleta,
+  .ubicacion,
+  .titulo,
+  .entrada,
+  .acciones,
+  .nota {
+    animation: none;
+  }
+
+  .polvo {
     display: none;
   }
 }
