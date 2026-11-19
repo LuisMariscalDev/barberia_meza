@@ -84,12 +84,14 @@ export const NEGOCIO: Negocio = {
     {
       id: 'ulises',
       nombre: 'Ulises',
+      telefono: '523221752714',
       turno: 'Mañana',
       horario: 'Lunes a sábado · 11:00 a 15:00',
     },
     {
       id: 'jose',
       nombre: 'José',
+      telefono: '527445162909',
       turno: 'Tarde',
       horario: 'Lunes a viernes · 17:00 a 21:00',
     },
