@@ -3,7 +3,7 @@
   flex-direction: column;
   height: 100%;
   background: var(--color-crema-claro);
-  border: 1px solid var(--color-borde);
+  border: 1.5px solid var(--color-borde);
   transition:
     transform var(--duracion) var(--curva),
     box-shadow var(--duracion) var(--curva),
@@ -81,61 +81,70 @@
   padding: 20px 20px 18px;
 }
 
-.turno {
+.cabecera {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 8px;
-  font-family: var(--fuente-rotulos);
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--color-texto-secundario);
-}
-
-.turno::before {
-  content: '';
-  flex: none;
-  width: 6px;
-  height: 6px;
-  background: var(--color-dorado);
-  transform: rotate(45deg);
+  justify-content: space-between;
+  gap: 8px 14px;
 }
 
 .nombre {
-  margin-top: 8px;
-  margin-bottom: 18px;
   font-size: 28px;
   line-height: 1.05;
 }
 
-.enlace {
+.turno {
+  padding: 4px 10px;
+  background: var(--color-dorado);
+  color: var(--color-carbon);
+  font-family: var(--fuente-rotulos);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.horario {
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--color-texto-secundario);
+}
+
+.boton {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  min-height: var(--alto-minimo-boton);
+  min-height: 52px;
   margin-top: auto;
-  padding-top: 16px;
-  border-top: 1px solid var(--color-borde);
+  padding: 14px 18px;
+  background: var(--color-dorado);
+  border: 1px solid var(--color-dorado);
+  color: var(--color-carbon);
   font-family: var(--fuente-rotulos);
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-decoration: none;
   text-transform: uppercase;
-  color: var(--color-carbon);
-  transition: color var(--duracion) var(--curva);
+  transition:
+    background-color var(--duracion) var(--curva),
+    border-color var(--duracion) var(--curva),
+    color var(--duracion) var(--curva);
 }
 
-.enlace span {
+.boton span {
   transition: transform var(--duracion) var(--curva);
 }
 
-.enlace:hover {
-  color: var(--color-dorado-texto);
+.boton:hover {
+  background: var(--color-carbon);
+  border-color: var(--color-carbon);
+  color: var(--color-crema-claro);
 }
 
-.enlace:hover span {
+.boton:hover span {
   transform: translateX(4px);
 }

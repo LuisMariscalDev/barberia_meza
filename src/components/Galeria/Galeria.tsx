@@ -5,14 +5,14 @@ export function Galeria() {
   return (
     <section
       className={estilos.seccion}
-      id="galeria"
+      id="trabajos"
       aria-labelledby="galeria-titulo"
     >
       <div className={estilos.contenedor} data-revelar>
         <header className={estilos.cabecera}>
-          <p className={estilos.etiqueta}>02 — El trabajo</p>
+          <p className={estilos.etiqueta}>03 — Trabajos</p>
           <h2 className={estilos.titulo} id="galeria-titulo">
-            El sillón, <em>sin filtros</em>.
+            Hecho aquí, <em>a mano</em>.
           </h2>
           <p className={estilos.entrada}>
             Cortes que salen del sillón, no de un banco de imágenes.
@@ -23,7 +23,12 @@ export function Galeria() {
           {NEGOCIO.galeria.map((foto, indice) => (
             <li className={estilos.item} key={foto.id} data-vacia={!foto.src}>
               {foto.src ? (
-                <img className={estilos.imagen} src={foto.src} alt={foto.alt} />
+                <img
+                  className={estilos.imagen}
+                  src={foto.src}
+                  alt={foto.alt}
+                  loading="lazy"
+                />
               ) : (
                 <span className={estilos.marco} aria-hidden="true">
                   <span className={estilos.marcoEtiqueta}>
@@ -31,9 +36,21 @@ export function Galeria() {
                   </span>
                 </span>
               )}
+
+              <span className={estilos.pie}>{foto.caption}</span>
             </li>
           ))}
         </ul>
+
+        <a
+          className={estilos.instagram}
+          href={NEGOCIO.redes.instagram}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Ver más en Instagram
+          <span aria-hidden="true">↗</span>
+        </a>
       </div>
     </section>
   )

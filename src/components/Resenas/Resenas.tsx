@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react'
 import { NEGOCIO } from '../../data/negocio'
 import estilos from './Resenas.module.css'
 
@@ -13,7 +14,7 @@ export function Resenas() {
     >
       <div className={estilos.contenedor} data-revelar>
         <div className={estilos.texto}>
-          <p className={estilos.etiqueta}>03 — Reseñas</p>
+          <p className={estilos.etiqueta}>04 — Reseñas</p>
           <h2 className={estilos.titulo} id="resenas-titulo">
             Búscanos <em>en Google</em>.
           </h2>
@@ -30,6 +31,15 @@ export function Resenas() {
             Ver reseñas en Google
             <span aria-hidden="true">↗</span>
           </a>
+
+          <ul
+            className={estilos.etiquetas}
+            aria-label="Lo que destacan los clientes"
+          >
+            {NEGOCIO.etiquetasResenas.map((etiqueta) => (
+              <li key={etiqueta}>{etiqueta}</li>
+            ))}
+          </ul>
         </div>
 
         <div className={estilos.ficha}>
@@ -52,15 +62,35 @@ export function Resenas() {
                 role="img"
                 aria-label={`Calificación de ${calificacion} de 5`}
               >
-                {Array.from({ length: 5 }, (_, indice) => (
-                  <span
-                    key={indice}
-                    data-activa={indice < Math.round(calificacion)}
-                    aria-hidden="true"
-                  >
-                    ★
-                  </span>
-                ))}
+                {Array.from({ length: 5 }, (_, indice) => {
+                  const relleno = Math.min(
+                    Math.max(calificacion - indice, 0),
+                    1,
+                  )
+                  const estado =
+                    relleno === 1
+                      ? 'total'
+                      : relleno === 0
+                        ? 'vacio'
+                        : 'parcial'
+
+                  return (
+                    <span
+                      key={indice}
+                      aria-hidden="true"
+                      data-relleno={estado}
+                      style={
+                        estado === 'parcial'
+                          ? ({
+                              '--relleno': relleno,
+                            } as CSSProperties)
+                          : undefined
+                      }
+                    >
+                      ★
+                    </span>
+                  )
+                })}
               </div>
             </>
           )}

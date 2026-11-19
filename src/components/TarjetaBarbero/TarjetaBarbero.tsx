@@ -24,6 +24,7 @@ export function TarjetaBarbero({ barbero, indice }: Props) {
           <img
             src={barbero.foto}
             alt={`${barbero.nombre}, barbero de ${NEGOCIO.nombre}`}
+            loading="lazy"
           />
         ) : (
           <span className={estilos.fotoEtiqueta}>Foto pendiente · 4:5</span>
@@ -35,17 +36,21 @@ export function TarjetaBarbero({ barbero, indice }: Props) {
       </div>
 
       <div className={estilos.cuerpo}>
-        <p className={estilos.turno}>{barbero.turno}</p>
-        <h3 className={estilos.nombre}>{barbero.nombre}</h3>
+        <div className={estilos.cabecera}>
+          <h3 className={estilos.nombre}>{barbero.nombre}</h3>
+          <span className={estilos.turno}>{barbero.turno}</span>
+        </div>
+
+        <p className={estilos.horario}>{barbero.horario}</p>
 
         <a
-          className={estilos.enlace}
+          className={estilos.boton}
           href={whatsapp}
           target="_blank"
           rel="noreferrer"
           aria-label={`Escribir por WhatsApp a ${barbero.nombre}`}
         >
-          Escribir por WhatsApp
+          WhatsApp de {barbero.nombre}
           <span aria-hidden="true">→</span>
         </a>
       </div>

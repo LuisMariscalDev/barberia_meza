@@ -82,7 +82,7 @@ export function Hero() {
         <div className={estilos.grid}>
           <div className={estilos.copia}>
             <p className={estilos.ubicacion}>
-              {NEGOCIO.ciudad}, {NEGOCIO.estado}
+              {NEGOCIO.colonia} · {NEGOCIO.ciudad}
             </p>
 
             <h1 className={estilos.titulo} id="hero-titulo">
@@ -98,10 +98,7 @@ export function Hero() {
               </span>
             </span>
 
-            <p className={estilos.entrada}>
-              Corte clásico, sin prisas y sin sorpresas. Elige a tu barbero y
-              aparta tu lugar por WhatsApp.
-            </p>
+            <p className={estilos.entrada}>{NEGOCIO.descripcionPortada}</p>
 
             <div className={estilos.acciones}>
               <a
@@ -113,7 +110,7 @@ export function Hero() {
                 Agendar por WhatsApp
                 <span aria-hidden="true">→</span>
               </a>
-              <a className={estilos.botonSecundario} href="#barberos">
+              <a className={estilos.botonSecundario} href="#equipo">
                 Conocer a los barberos
               </a>
             </div>
@@ -159,7 +156,7 @@ export function Hero() {
                 <div>
                   <dt>Lugar</dt>
                   <dd>
-                    {NEGOCIO.ciudad}, {NEGOCIO.estado}
+                    {NEGOCIO.colonia}, {NEGOCIO.ciudad}
                   </dd>
                 </div>
               </dl>

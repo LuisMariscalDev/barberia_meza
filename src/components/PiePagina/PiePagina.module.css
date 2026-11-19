@@ -138,11 +138,13 @@
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 768px) {
   .pie {
     padding-bottom: 0;
   }
+}
 
+@media (min-width: 900px) {
   .contenedor {
     grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
     gap: 40px;

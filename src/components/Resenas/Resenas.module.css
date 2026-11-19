@@ -87,6 +87,25 @@
   color: var(--color-azul);
 }
 
+.etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.etiquetas li {
+  padding: 6px 10px;
+  border: 1px solid
+    color-mix(in oklab, var(--color-crema-claro) 35%, transparent);
+  font-family: var(--fuente-rotulos);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-pie-texto);
+}
+
 .ficha {
   position: relative;
   justify-self: start;
@@ -147,8 +166,20 @@
   color: var(--color-borde);
 }
 
-.estrellas span[data-activa='true'] {
+.estrellas span[data-relleno='total'] {
   color: var(--color-dorado);
+}
+
+.estrellas span[data-relleno='parcial'] {
+  background: linear-gradient(
+    90deg,
+    var(--color-dorado) calc(var(--relleno) * 100%),
+    var(--color-borde) calc(var(--relleno) * 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 .cantidad {

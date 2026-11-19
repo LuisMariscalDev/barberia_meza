@@ -36,7 +36,7 @@ export function Agenda() {
             Agendar por WhatsApp
             <span aria-hidden="true">→</span>
           </a>
-          <a className={estilos.botonSecundario} href="#barberos">
+          <a className={estilos.botonSecundario} href="#equipo">
             Conocer a los barberos
           </a>
         </div>

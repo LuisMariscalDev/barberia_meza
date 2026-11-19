@@ -3,6 +3,7 @@
   top: 10px;
   left: 16px;
   z-index: 200;
+  min-height: var(--alto-minimo-boton);
   padding: 12px 20px;
   background: var(--color-carbon);
   color: var(--color-crema-claro);
@@ -120,14 +121,23 @@
 }
 
 .lugar {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--alto-minimo-boton);
   margin-left: auto;
   font-family: var(--fuente-rotulos);
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.18em;
+  text-decoration: none;
   text-transform: uppercase;
   color: var(--color-texto-secundario);
+  transition: color var(--duracion) var(--curva);
   animation: entrarArriba 520ms var(--curva) 320ms backwards;
+}
+
+.lugar:hover {
+  color: var(--color-carbon);
 }
 
 .navegacion {

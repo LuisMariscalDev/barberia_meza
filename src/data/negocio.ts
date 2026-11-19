@@ -1,72 +1,145 @@
 import type { Negocio } from '../types/negocio'
 
-// Contenido de ejemplo para revisar el diseño. Reemplazar por los datos reales antes de publicar.
+// Datos confirmados en el artefacto de diseño (20 oct 2026).
+// El teléfono sale de la página de Facebook de la barbería; confirmar con
+// Ulises que es el mismo número de WhatsApp y, si cada barbero tiene uno
+// propio, agregarlo en `barberos[].telefono`.
 export const NEGOCIO: Negocio = {
   nombre: 'Barbería Meza',
   ciudad: 'Las Juntas',
+  colonia: 'Real Ixtapa',
   estado: 'Jalisco',
+  codigoPostal: '48280',
   precioCorte: 200,
   moneda: 'MXN',
-  telefono: '523300000000',
-  direccion: 'Av. Juárez 000, Las Juntas',
-  enlaceMapa:
-    'https://www.google.com/maps/search/?api=1&query=Las+Juntas%2C+Jalisco',
-  enlaceResenas:
-    'https://www.google.com/search?q=Barber%C3%ADa+Meza+Las+Juntas+Jalisco',
-  calificacion: null,
-  resenas: null,
+  telefono: '523221752714',
+  direccion: 'C. Paseo de la Industria 1325-A',
+  enlaceMapa: 'https://maps.google.com/?cid=0x1fb017eed7b82e5',
+  enlaceResenas: 'https://www.google.com/maps?cid=0x1fb017eed7b82e5',
+  calificacion: 4.7,
+  resenas: 13,
+  etiquetasResenas: [
+    'Buen trato',
+    'Aire acondicionado',
+    'Buena música',
+    'Ideal para niños',
+  ],
+  descripcionPortada:
+    'Ulises en la mañana, José en la tarde. Elige a tu barbero y aparta tu lugar por WhatsApp.',
   horario: [
-    { indice: 1, dia: 'Lunes', abre: '10:00', cierra: '20:00', cerrado: false },
+    {
+      indice: 1,
+      dia: 'Lunes',
+      cerrado: false,
+      intervalos: [
+        { abre: '11:00', cierra: '15:00' },
+        { abre: '17:00', cierra: '21:00' },
+      ],
+    },
     {
       indice: 2,
       dia: 'Martes',
-      abre: '10:00',
-      cierra: '20:00',
       cerrado: false,
+      intervalos: [
+        { abre: '11:00', cierra: '15:00' },
+        { abre: '17:00', cierra: '21:00' },
+      ],
     },
     {
       indice: 3,
       dia: 'Miércoles',
-      abre: '10:00',
-      cierra: '20:00',
       cerrado: false,
+      intervalos: [
+        { abre: '11:00', cierra: '15:00' },
+        { abre: '17:00', cierra: '21:00' },
+      ],
     },
     {
       indice: 4,
       dia: 'Jueves',
-      abre: '10:00',
-      cierra: '20:00',
       cerrado: false,
+      intervalos: [
+        { abre: '11:00', cierra: '15:00' },
+        { abre: '17:00', cierra: '21:00' },
+      ],
     },
     {
       indice: 5,
       dia: 'Viernes',
-      abre: '10:00',
-      cierra: '20:00',
       cerrado: false,
+      intervalos: [
+        { abre: '11:00', cierra: '15:00' },
+        { abre: '17:00', cierra: '21:00' },
+      ],
     },
     {
       indice: 6,
       dia: 'Sábado',
-      abre: '09:00',
-      cierra: '18:00',
       cerrado: false,
+      intervalos: [{ abre: '11:00', cierra: '15:00' }],
     },
-    { indice: 0, dia: 'Domingo', abre: '', cierra: '', cerrado: true },
+    { indice: 0, dia: 'Domingo', cerrado: true, intervalos: [] },
   ],
   barberos: [
-    { id: 'barbero-uno', nombre: 'Barbero uno', turno: 'Turno de mañana' },
-    { id: 'barbero-dos', nombre: 'Barbero dos', turno: 'Turno de tarde' },
-    { id: 'barbero-tres', nombre: 'Barbero tres', turno: 'Todo el día' },
+    {
+      id: 'ulises',
+      nombre: 'Ulises',
+      turno: 'Mañana',
+      horario: 'Lunes a sábado · 11:00 a 15:00',
+    },
+    {
+      id: 'jose',
+      nombre: 'José',
+      turno: 'Tarde',
+      horario: 'Lunes a viernes · 17:00 a 21:00',
+    },
   ],
   galeria: [
-    { id: 'foto-uno', alt: 'Interior de la barbería, pendiente de foto' },
-    { id: 'foto-dos', alt: 'Corte terminado, pendiente de foto' },
-    { id: 'foto-tres', alt: 'Detalle de navaja, pendiente de foto' },
-    { id: 'foto-cuatro', alt: 'Sillón de barbero, pendiente de foto' },
-    { id: 'foto-cinco', alt: 'Cliente en el espejo, pendiente de foto' },
+    {
+      id: 'taper',
+      alt: 'Corte taper visto desde atrás, sin rostro del cliente',
+      caption: 'Taper',
+    },
+    {
+      id: 'clasico',
+      alt: 'Corte clásico terminado, de perfil',
+      caption: 'Clásico',
+    },
+    {
+      id: 'corte-y-barba',
+      alt: 'Corte y barba con acabado a mano',
+      caption: 'Corte y barba',
+    },
+    {
+      id: 'el-taller',
+      alt: 'Interior de la barbería, el taller',
+      caption: 'El taller',
+    },
   ],
+  servicios: [
+    {
+      id: 'corte',
+      nombre: 'Corte de cabello',
+      precio: 200,
+      duracion: '~1 hora',
+    },
+    { id: 'fade', nombre: 'Fade', precio: 200, duracion: '~1 hora' },
+    { id: 'barba', nombre: 'Barba', precio: 200, duracion: '~1 hora' },
+    {
+      id: 'nino',
+      nombre: 'Corte de niño',
+      precio: 200,
+      duracion: '~1 hora',
+    },
+  ],
+  formasPago: 'Efectivo · Transferencia · Tarjeta',
+  duracionAproximada: 'Cada servicio dura alrededor de una hora.',
+  redes: {
+    instagram: 'https://www.instagram.com/barberiameza98/',
+    facebook: 'https://www.facebook.com/profile.php?id=61587294583121',
+  },
+  avisoPrivacidad: '/aviso-de-privacidad',
 }
 
 export const MENSAJE_PREDETERMINADO =
-  'Hola, quiero agendar un corte en Barbería Meza.'
+  'Hola, quiero agendar un corte en Barbería Meza (Real Ixtapa).'

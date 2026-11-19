@@ -8,7 +8,9 @@ export function obtenerDiaActual(horario: DiaHorario[]) {
 
 export function describirHorario(dia: DiaHorario | undefined) {
   if (!dia) return '—'
-  if (dia.cerrado) return 'Cerrado'
+  if (dia.cerrado || dia.intervalos.length === 0) return 'Cerrado'
 
-  return `${dia.abre} – ${dia.cierra}`
+  return dia.intervalos
+    .map(({ abre, cierra }) => `${abre} – ${cierra}`)
+    .join(' · ')
 }

@@ -10,17 +10,18 @@ export function Horario() {
   return (
     <section
       className={estilos.seccion}
-      id="horario"
+      id="ubicacion"
       aria-labelledby="horario-titulo"
     >
       <div className={estilos.contenedor} data-revelar>
         <header className={estilos.cabecera}>
-          <p className={estilos.etiqueta}>04 — Horario y ubicación</p>
+          <p className={estilos.etiqueta}>05 — Ubicación</p>
           <h2 className={estilos.titulo} id="horario-titulo">
-            Cuándo y <em>dónde</em>.
+            Te esperamos en <em>Real Ixtapa</em>.
           </h2>
           <p className={estilos.entrada}>
-            Estos son los días y las horas en que estamos en el sillón.
+            Este es el horario de la barbería y la dirección para llegar. Si es
+            tu primera vez, escríbenos por WhatsApp.
           </p>
         </header>
 
@@ -60,7 +61,8 @@ export function Horario() {
             <address className={estilos.direccion}>
               {NEGOCIO.direccion}
               <span>
-                {NEGOCIO.ciudad}, {NEGOCIO.estado}
+                {NEGOCIO.colonia}, {NEGOCIO.codigoPostal} {NEGOCIO.ciudad},{' '}
+                {NEGOCIO.estado}
               </span>
             </address>
 
@@ -70,7 +72,7 @@ export function Horario() {
               target="_blank"
               rel="noreferrer"
             >
-              Abrir en Google Maps
+              Cómo llegar
               <span aria-hidden="true">↗</span>
             </a>
 

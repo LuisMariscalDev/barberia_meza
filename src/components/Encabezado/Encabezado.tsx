@@ -4,11 +4,11 @@ import { crearEnlaceWhatsApp } from '../../lib/whatsapp'
 import estilos from './Encabezado.module.css'
 
 const ENLACES = [
-  { href: '#precio', texto: 'Precio' },
-  { href: '#barberos', texto: 'Barberos' },
-  { href: '#galeria', texto: 'Galería' },
+  { href: '#precios', texto: 'Precios' },
+  { href: '#equipo', texto: 'Equipo' },
+  { href: '#trabajos', texto: 'Trabajos' },
   { href: '#resenas', texto: 'Reseñas' },
-  { href: '#horario', texto: 'Horario' },
+  { href: '#ubicacion', texto: 'Ubicación' },
 ]
 
 export function Encabezado() {
@@ -72,9 +72,9 @@ export function Encabezado() {
             <span className={estilos.marcaMeza}>MEZA</span>
           </a>
 
-          <p className={estilos.lugar}>
-            {NEGOCIO.ciudad}, {NEGOCIO.estado}
-          </p>
+          <a className={estilos.lugar} href="#ubicacion">
+            Ubicación
+          </a>
 
           <nav className={estilos.navegacion} aria-label="Secciones del sitio">
             {ENLACES.map((enlace) => (

@@ -4,11 +4,11 @@ import { crearEnlaceWhatsApp } from '../../lib/whatsapp'
 import estilos from './PiePagina.module.css'
 
 const ENLACES = [
-  { href: '#precio', texto: 'Precio' },
-  { href: '#barberos', texto: 'Barberos' },
-  { href: '#galeria', texto: 'Galería' },
+  { href: '#precios', texto: 'Precios' },
+  { href: '#equipo', texto: 'Equipo' },
+  { href: '#trabajos', texto: 'Trabajos' },
   { href: '#resenas', texto: 'Reseñas' },
-  { href: '#horario', texto: 'Horario' },
+  { href: '#ubicacion', texto: 'Ubicación' },
 ]
 
 export function PiePagina() {
@@ -46,7 +46,7 @@ export function PiePagina() {
             Hoy
             <strong>{horarioHoy}</strong>
           </p>
-          <a className={estilos.enlace} href="#horario">
+          <a className={estilos.enlace} href="#ubicacion">
             Ver la semana
           </a>
         </div>
@@ -67,6 +67,26 @@ export function PiePagina() {
             <li>
               <a
                 className={estilos.enlace}
+                href={NEGOCIO.redes.instagram}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a
+                className={estilos.enlace}
+                href={NEGOCIO.redes.facebook}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Facebook
+              </a>
+            </li>
+            <li>
+              <a
+                className={estilos.enlace}
                 href={NEGOCIO.enlaceMapa}
                 target="_blank"
                 rel="noreferrer"
@@ -76,7 +96,7 @@ export function PiePagina() {
             </li>
           </ul>
           <p className={estilos.lugar}>
-            {NEGOCIO.ciudad}, {NEGOCIO.estado}
+            {NEGOCIO.colonia}, {NEGOCIO.ciudad}
           </p>
         </div>
       </div>
@@ -87,7 +107,10 @@ export function PiePagina() {
             © {anio} {NEGOCIO.nombre}
           </p>
           <p>
-            Hecho por{' '}
+            <a href={NEGOCIO.avisoPrivacidad}>Aviso de privacidad</a>
+          </p>
+          <p>
+            Sitio hecho por{' '}
             <a
               href="https://github.com/LuisMariscalDev"
               target="_blank"
