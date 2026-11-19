@@ -133,7 +133,7 @@
 }
 
 .enlace:hover {
-  color: var(--color-rojo);
+  color: var(--color-dorado-texto);
 }
 
 .enlace:hover span {

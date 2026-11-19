@@ -148,7 +148,7 @@
   left: -1px;
   width: 44px;
   height: 3px;
-  background: var(--color-rojo);
+  background: var(--color-dorado);
 }
 
 .direccion {
@@ -212,8 +212,8 @@
 }
 
 .enlaceSecundario:hover {
-  border-color: var(--color-rojo);
-  color: var(--color-rojo);
+  border-color: var(--color-dorado-texto);
+  color: var(--color-dorado-texto);
 }
 
 .oculto {

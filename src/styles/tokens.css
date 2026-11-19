@@ -7,7 +7,6 @@
   --color-texto-secundario: #6b655a;
   --color-dorado: #d4a64a; /* solo rellenos */
   --color-dorado-texto: #8c6a1f; /* precios, 24px o más */
-  --color-rojo: #b3282d;
   --color-azul: #2e4a7d;
   --color-pie-texto: #cfc6b2;
   --color-pie-texto-secundario: #a9a296;
@@ -16,6 +15,11 @@
   --color-dorado-tenue: color-mix(
     in oklab,
     var(--color-dorado) 26%,
+    var(--color-crema-claro)
+  );
+  --color-dorado-claro: color-mix(
+    in oklab,
+    var(--color-dorado) 55%,
     var(--color-crema-claro)
   );
   --color-crema-tenue: color-mix(

@@ -16,13 +16,13 @@ aquí; no se inventan tonos ni familias.
 | `--color-texto-secundario`     | `#6b655a` | Texto de apoyo                      |
 | `--color-dorado`               | `#d4a64a` | Rellenos, sellos, detalles          |
 | `--color-dorado-texto`         | `#8c6a1f` | Precios y acentos de 24 px o más    |
-| `--color-rojo`                 | `#b3282d` | Sello de goma, banda de cierre      |
 | `--color-azul`                 | `#2e4a7d` | Banda de reseñas, enlace de mapa    |
 | `--color-pie-texto`            | `#cfc6b2` | Texto del pie                       |
 | `--color-pie-texto-secundario` | `#a9a296` | Rótulos del pie                     |
 
-Los derivados (`--color-dorado-tenue`, `--color-crema-tenue`,
-`--color-tinta-tenue`) se generan con `color-mix()` a partir de estos valores.
+Los derivados (`--color-dorado-tenue`, `--color-dorado-claro`,
+`--color-crema-tenue`, `--color-tinta-tenue`) se generan con `color-mix()` a
+partir de estos valores.
 
 ## Tipografía
 

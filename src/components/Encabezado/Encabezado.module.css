@@ -116,7 +116,7 @@
 }
 
 .marca:hover .marcaMeza {
-  color: var(--color-rojo);
+  color: var(--color-dorado-texto);
 }
 
 .lugar {
