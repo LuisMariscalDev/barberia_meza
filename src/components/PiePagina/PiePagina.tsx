@@ -20,6 +20,14 @@ export function PiePagina() {
     <footer className={estilos.pie} data-tema="oscuro">
       <div className={estilos.contenedor}>
         <div className={estilos.marca}>
+          <img
+            className={estilos.marcaLogo}
+            src="/imagenes/logo-barberia-meza.webp"
+            alt=""
+            width={64}
+            height={64}
+            loading="lazy"
+          />
           <p className={estilos.marcaBarberia}>Barbería</p>
           <p className={estilos.marcaMeza}>MEZA</p>
           <p className={estilos.lema}>

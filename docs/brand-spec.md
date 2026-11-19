@@ -42,13 +42,14 @@ llamadas a Google Fonts.
 
 ## Piezas del sitio
 
-- **Portada:** marca tipográfica, precio único, boleta con horario y dos CTA.
-  La foto del fade y el sello circular del artefacto siguen pendientes.
+- **Portada:** marca tipográfica con logo, precio único, boleta con horario y
+  dos CTA. El sello circular ya usa el logo; la foto del fade sigue pendiente.
 - **Precios:** tarjeta con los cuatro servicios a $200, formas de pago y
   duración aproximada.
 - **Equipo:** una tarjeta por barbero con foto, turno, horario y botón dorado
   de WhatsApp. Las fotos están pendientes.
-- **Trabajos:** galería 2×2 con pie de foto y enlace a Instagram.
+- **Trabajos:** galería 2×2 con fotos del local, pie de foto y enlace a
+  Instagram.
 - **Reseñas:** 4.7 de 5 con 13 reseñas y etiquetas de lo que destacan los
   clientes.
 - **Horario y ubicación:** tabla semanal con horario partido, dirección y
@@ -60,10 +61,14 @@ llamadas a Google Fonts.
 
 ## Recursos de marca
 
-- **Logo:** pendiente. Mientras no exista el archivo oficial, la marca se
-  compone tipográficamente y el favicon usa el monograma M.
-- **Fotografías:** pendientes. Las tarjetas de barbero y la galería muestran
-  marcos rotulados en lugar de imágenes de banco.
+- **Logo:** `public/imagenes/logo-barberia-meza.webp` (recorte circular con
+  fondo transparente). Se usa en el encabezado, el sello de la portada, el pie
+  y el favicon (`favicon-32.png`, `apple-touch-icon.png`). La versión para
+  compartir en redes está en `logo-barberia-meza-og.jpg`.
+- **Fotografías:** cuatro fotos del local en `public/imagenes/local-0*.webp`,
+  con variantes de 800 px para móvil. Los originales de WhatsApp se guardan en
+  `docs/fotos-originales/` para no publicarlos. Las fotos de los barberos y de
+  cortes siguen pendientes.
 - **Ficha de Google:** enlazada con 4.7 de calificación y 13 reseñas.
 
 ## Contenido confirmado
@@ -82,10 +87,10 @@ llamadas a Google Fonts.
 - **Confirmar el teléfono de WhatsApp.** `src/data/negocio.ts` usa
   `523221752714`, tomado de la página de Facebook de la barbería. Confirmar con
   Ulises que es el número de citas y si cada barbero tiene uno propio.
-- Fotos de Ulises y José trabajando; sustituir las dos fotos de la galería que
-  muestran cara o marca de cliente.
-- Logo original o SVG; si no, recortar la versión de Instagram en círculo.
-- `og:image` y favicon definitivos.
+- Fotos de Ulises y José trabajando, y fotos de cortes para completar la
+  galería.
+- `og:image` definitiva cuando exista dominio: usar
+  `/imagenes/logo-barberia-meza-og.jpg` o una foto del local.
 - Dominio y hospedaje con uso comercial permitido (Netlify o Cloudflare Pages,
   no el plan gratuito de Vercel).
 - Revisión legal del texto del aviso de privacidad.

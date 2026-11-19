@@ -31,6 +31,10 @@ export interface Foto {
   alt: string
   caption: string
   src?: string
+  srcChico?: string
+  ancho?: number
+  alto?: number
+  posicion?: string
 }
 
 export interface Redes {

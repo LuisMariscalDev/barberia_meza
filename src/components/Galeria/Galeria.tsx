@@ -15,7 +15,8 @@ export function Galeria() {
             Hecho aquí, <em>a mano</em>.
           </h2>
           <p className={estilos.entrada}>
-            Cortes que salen del sillón, no de un banco de imágenes.
+            El taller, las sillas y el espejo donde se hace cada corte. Sin
+            banco de imágenes.
           </p>
         </header>
 
@@ -26,8 +27,22 @@ export function Galeria() {
                 <img
                   className={estilos.imagen}
                   src={foto.src}
+                  srcSet={
+                    foto.srcChico
+                      ? `${foto.srcChico} 800w, ${foto.src} 1200w`
+                      : undefined
+                  }
+                  sizes="(min-width: 1184px) 554px, 50vw"
                   alt={foto.alt}
+                  width={foto.ancho}
+                  height={foto.alto}
+                  style={
+                    foto.posicion
+                      ? { objectPosition: foto.posicion }
+                      : undefined
+                  }
                   loading="lazy"
+                  decoding="async"
                 />
               ) : (
                 <span className={estilos.marco} aria-hidden="true">

@@ -71,15 +71,30 @@
 }
 
 .marca {
-  position: relative;
-  display: grid;
-  padding-bottom: 7px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   color: var(--color-carbon);
   line-height: 0.82;
   text-decoration: none;
 }
 
-.marca::after {
+.marcaLogo {
+  flex: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  filter: drop-shadow(0 1px 2px rgb(0 0 0 / 18%));
+  animation: entrarArriba 520ms var(--curva) 60ms backwards;
+}
+
+.marcaTexto {
+  position: relative;
+  display: grid;
+  padding-bottom: 7px;
+}
+
+.marcaTexto::after {
   content: '';
   position: absolute;
   right: 0;
@@ -93,7 +108,7 @@
   animation: trazarRegla 700ms var(--curva) 460ms backwards;
 }
 
-.marca:hover::after {
+.marca:hover .marcaTexto::after {
   transform: scaleX(1);
 }
 
@@ -292,6 +307,11 @@
     min-height: 76px;
   }
 
+  .marcaLogo {
+    width: 42px;
+    height: 42px;
+  }
+
   .lugar {
     display: none;
   }
@@ -309,9 +329,10 @@
 
 @media (prefers-reduced-motion: reduce) {
   .encabezado,
+  .marcaLogo,
   .marcaBarberia,
   .marcaMeza,
-  .marca::after,
+  .marcaTexto::after,
   .lugar,
   .enlace,
   .agendar {

@@ -68,8 +68,17 @@ export function Encabezado() {
             href="#inicio"
             aria-label="Barbería Meza, ir al inicio"
           >
-            <span className={estilos.marcaBarberia}>Barbería</span>
-            <span className={estilos.marcaMeza}>MEZA</span>
+            <img
+              className={estilos.marcaLogo}
+              src="/imagenes/logo-barberia-meza.webp"
+              alt=""
+              width={40}
+              height={40}
+            />
+            <span className={estilos.marcaTexto}>
+              <span className={estilos.marcaBarberia}>Barbería</span>
+              <span className={estilos.marcaMeza}>MEZA</span>
+            </span>
           </a>
 
           <a className={estilos.lugar} href="#ubicacion">

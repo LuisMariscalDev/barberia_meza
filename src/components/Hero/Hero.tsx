@@ -91,11 +91,13 @@ export function Hero() {
             </h1>
 
             <span className={estilos.selloFlotante} aria-hidden="true">
-              <span className={estilos.sello}>
-                <span>Barbería</span>
-                <span>Meza</span>
-                <span>{NEGOCIO.ciudad}</span>
-              </span>
+              <img
+                className={estilos.sello}
+                src="/imagenes/logo-barberia-meza.webp"
+                alt=""
+                width={120}
+                height={120}
+              />
             </span>
 
             <p className={estilos.entrada}>{NEGOCIO.descripcionPortada}</p>
