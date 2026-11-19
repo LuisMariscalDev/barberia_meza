@@ -1,0 +1,341 @@
+.saltar {
+  position: fixed;
+  top: 10px;
+  left: 16px;
+  z-index: 200;
+  min-height: var(--alto-minimo-boton);
+  padding: 12px 20px;
+  background: var(--color-carbon);
+  color: var(--color-crema-claro);
+  font-family: var(--fuente-rotulos);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transform: translateY(-200%);
+  transition: transform var(--duracion-rapida) var(--curva);
+}
+
+.saltar:focus-visible {
+  outline-color: var(--color-dorado);
+  transform: translateY(0);
+}
+
+.encabezado {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: color-mix(
+    in oklab,
+    var(--color-crema-claro) 88%,
+    transparent
+  );
+  border-bottom: 1px solid transparent;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition:
+    background-color var(--duracion) var(--curva),
+    border-color var(--duracion) var(--curva);
+  animation: entrarEncabezado 520ms var(--curva) backwards;
+}
+
+.encabezado[data-desplazado='true'] {
+  background-color: color-mix(
+    in oklab,
+    var(--color-crema-claro) 95%,
+    transparent
+  );
+  border-bottom-color: var(--color-borde);
+}
+
+.progreso {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 2px;
+  background: var(--color-dorado);
+  transform: scaleX(var(--progreso, 0));
+  transform-origin: left;
+  pointer-events: none;
+}
+
+.contenedor {
+  display: flex;
+  align-items: center;
+  gap: var(--espacio-lg);
+  width: min(calc(100% - var(--margen-lateral) * 2), var(--ancho-contenido));
+  min-height: 62px;
+  margin-inline: auto;
+}
+
+.marca {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-carbon);
+  line-height: 0.82;
+  text-decoration: none;
+}
+
+.marcaLogo {
+  flex: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  filter: drop-shadow(0 1px 2px rgb(0 0 0 / 18%));
+  animation: entrarArriba 520ms var(--curva) 60ms backwards;
+}
+
+.marcaTexto {
+  position: relative;
+  display: grid;
+  padding-bottom: 7px;
+}
+
+.marcaTexto::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: var(--color-dorado);
+  transform: scaleX(0.22);
+  transform-origin: left;
+  transition: transform var(--duracion) var(--curva);
+  animation: trazarRegla 700ms var(--curva) 460ms backwards;
+}
+
+.marca:hover .marcaTexto::after {
+  transform: scaleX(1);
+}
+
+.marcaBarberia {
+  font-family: var(--fuente-titulos);
+  font-size: 13px;
+  font-style: italic;
+  line-height: 1;
+  color: var(--color-texto-secundario);
+  animation: entrarArriba 520ms var(--curva) 80ms backwards;
+}
+
+.marcaMeza {
+  font-family: var(--fuente-rotulos);
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.09em;
+  transition: color var(--duracion) var(--curva);
+  animation: entrarArriba 620ms var(--curva) 150ms backwards;
+}
+
+.marca:hover .marcaMeza {
+  color: var(--color-dorado-texto);
+}
+
+.lugar {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--alto-minimo-boton);
+  margin-left: auto;
+  font-family: var(--fuente-rotulos);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--color-texto-secundario);
+  transition: color var(--duracion) var(--curva);
+  animation: entrarArriba 520ms var(--curva) 320ms backwards;
+}
+
+.lugar:hover {
+  color: var(--color-carbon);
+}
+
+.navegacion {
+  display: none;
+  align-items: center;
+  gap: clamp(16px, 2.4vw, 30px);
+  margin-left: auto;
+}
+
+.enlace {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: var(--alto-minimo-boton);
+  padding-block: 8px;
+  font-family: var(--fuente-rotulos);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--color-texto-secundario);
+  transition: color var(--duracion) var(--curva);
+  animation: entrarArriba 520ms var(--curva) backwards;
+}
+
+.enlace:nth-child(1) {
+  animation-delay: 280ms;
+}
+
+.enlace:nth-child(2) {
+  animation-delay: 330ms;
+}
+
+.enlace:nth-child(3) {
+  animation-delay: 380ms;
+}
+
+.enlace:nth-child(4) {
+  animation-delay: 430ms;
+}
+
+.enlace:nth-child(5) {
+  animation-delay: 480ms;
+}
+
+.enlace::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 4px;
+  left: 0;
+  height: 1.5px;
+  background: var(--color-dorado);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--duracion) var(--curva);
+}
+
+.enlace:hover {
+  color: var(--color-carbon);
+}
+
+.enlace:hover::after,
+.enlace:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.agendar {
+  position: relative;
+  display: none;
+  align-items: center;
+  gap: 10px;
+  min-height: var(--alto-minimo-boton);
+  padding-inline: 20px;
+  background: var(--color-carbon);
+  border: 1px solid var(--color-carbon);
+  color: var(--color-crema-claro);
+  font-family: var(--fuente-rotulos);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    background-color var(--duracion) var(--curva),
+    color var(--duracion) var(--curva),
+    transform var(--duracion) var(--curva);
+  animation: entrarArriba 560ms var(--curva) 520ms backwards;
+}
+
+.agendar::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: var(--color-dorado);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--duracion) var(--curva);
+}
+
+.agendar span {
+  transition: transform var(--duracion) var(--curva);
+}
+
+.agendar:hover {
+  background: transparent;
+  color: var(--color-carbon);
+  transform: translateY(-2px);
+}
+
+.agendar:hover::after,
+.agendar:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.agendar:hover span {
+  transform: translateX(4px);
+}
+
+.agendar:active {
+  transform: translateY(0);
+}
+
+@keyframes entrarEncabezado {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes entrarArriba {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+@keyframes trazarRegla {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .contenedor {
+    min-height: 76px;
+  }
+
+  .marcaLogo {
+    width: 42px;
+    height: 42px;
+  }
+
+  .lugar {
+    display: none;
+  }
+
+  .agendar {
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 900px) {
+  .navegacion {
+    display: flex;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .encabezado,
+  .marcaLogo,
+  .marcaBarberia,
+  .marcaMeza,
+  .marcaTexto::after,
+  .lugar,
+  .enlace,
+  .agendar {
+    animation: none;
+  }
+}

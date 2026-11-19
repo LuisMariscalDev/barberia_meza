@@ -1,0 +1,53 @@
+.cinta {
+  overflow: hidden;
+  padding-block: 11px;
+  background: var(--color-carbon);
+  border-block: 1px solid var(--color-carbon);
+  color: var(--color-crema);
+}
+
+.pista {
+  display: flex;
+  width: max-content;
+  animation: desfilar 38s linear infinite;
+}
+
+.grupo {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding-right: 30px;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 30px;
+  font-family: var(--fuente-rotulos);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--color-pie-texto);
+}
+
+.punto {
+  flex: none;
+  width: 5px;
+  height: 5px;
+  background: var(--color-dorado);
+  transform: rotate(45deg);
+}
+
+@keyframes desfilar {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (hover: hover) {
+  .cinta:hover .pista {
+    animation-play-state: paused;
+  }
+}
