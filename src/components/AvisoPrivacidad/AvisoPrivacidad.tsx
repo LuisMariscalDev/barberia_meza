@@ -21,7 +21,7 @@ export function AvisoPrivacidad() {
         <a
           className={estilos.marca}
           href="/"
-          aria-label="Barbería Meza, inicio"
+          aria-label="Barbería MEZA, inicio"
         >
           <span className={estilos.marcaBarberia}>Barbería</span>
           <span className={estilos.marcaMeza}>MEZA</span>

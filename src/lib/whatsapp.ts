@@ -5,5 +5,5 @@ export function crearEnlaceWhatsApp(telefono: string, mensaje: string) {
 }
 
 export function crearMensajeParaBarbero(nombre: string) {
-  return `Hola, quiero agendar un corte con ${nombre} en Barbería Meza.`
+  return `Hola, quiero agendar un corte con ${nombre} en Barbería MEZA.`
 }

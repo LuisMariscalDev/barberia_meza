@@ -5,7 +5,7 @@ import type { Negocio } from '../types/negocio'
 // Ulises que es el mismo número de WhatsApp y, si cada barbero tiene uno
 // propio, agregarlo en `barberos[].telefono`.
 export const NEGOCIO: Negocio = {
-  nombre: 'Barbería Meza',
+  nombre: 'Barbería MEZA',
   ciudad: 'Puerto Vallarta',
   colonia: 'Ixtapa',
   estado: 'Jalisco',
@@ -100,7 +100,7 @@ export const NEGOCIO: Negocio = {
   galeria: [
     {
       id: 'el-taller',
-      alt: 'Interior de Barbería Meza con dos sillas de barbero, televisión y ventana',
+      alt: 'Interior de Barbería MEZA con dos sillas de barbero, televisión y ventana',
       caption: 'El taller',
       src: '/imagenes/local-01.webp',
       srcChico: '/imagenes/local-01-800.webp',

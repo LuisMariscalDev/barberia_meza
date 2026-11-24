@@ -75,7 +75,7 @@ export function Horario() {
               href="#equipo"
               rel="noreferrer"
             >
-              Elige a tu barbero.
+              Elige a tu barbero
               <span aria-hidden="true">→</span>
             </a>
           </div>
