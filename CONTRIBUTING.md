@@ -14,7 +14,6 @@ Reglas de trabajo para todos los que hacen commits en este repositorio.
 - `dev` es la rama de trabajo y la que se publica como vista previa.
 - Toda rama sale de `dev` y vuelve a `dev` por pull request.
 - `main` solo recibe merges desde `dev`, cuando el cliente aprueba una entrega.
-- Los componentes se exportan con nombre (`export function Precios`), no con `export default`.
 - Nombres de rama: `feat/seccion-precios`, `fix/enlace-whatsapp`, `chore/configurar-prettier`
 - Los commits siguen [Conventional Commits](https://www.conventionalcommits.org/es/). El prefijo va en inglés porque es parte del estándar, y la descripción en español:
 
@@ -52,6 +51,7 @@ Los nombres describen el dato que guardan. Sin abreviaturas (`btn`, `hor`, `dato
 ## Componentes
 
 - Un componente por archivo y una sola responsabilidad por componente.
+- Los componentes se exportan con nombre (`export function Precios`), no con `export default`.
 - Nada de contenido escrito en el JSX: precios, horarios, nombres y enlaces salen de `src/data`.
 - Nada de valores sueltos: colores, tipografías y espaciados salen de los tokens en `src/styles/tokens.css`.
 
