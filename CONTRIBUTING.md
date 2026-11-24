@@ -10,7 +10,11 @@ Reglas de trabajo para todos los que hacen commits en este repositorio.
 
 ## Git
 
-- `main` siempre debe compilar y funcionar. Se trabaja en una rama y se une por pull request.
+- `main` siempre debe compilar y funcionar.
+- `dev` es la rama de trabajo y la que se publica como vista previa.
+- Toda rama sale de `dev` y vuelve a `dev` por pull request.
+- `main` solo recibe merges desde `dev`, cuando el cliente aprueba una entrega.
+- Los componentes se exportan con nombre (`export function Precios`), no con `export default`.
 - Nombres de rama: `feat/seccion-precios`, `fix/enlace-whatsapp`, `chore/configurar-prettier`
 - Los commits siguen [Conventional Commits](https://www.conventionalcommits.org/es/). El prefijo va en inglés porque es parte del estándar, y la descripción en español:
 
