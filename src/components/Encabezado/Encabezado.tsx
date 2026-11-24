@@ -63,7 +63,7 @@ export function Encabezado() {
           <a
             className={estilos.marca}
             href="#inicio"
-            aria-label="Barbería Meza, ir al inicio"
+            aria-label="Barbería MEZA, ir al inicio"
           >
             <img
               className={estilos.marcaLogo}
