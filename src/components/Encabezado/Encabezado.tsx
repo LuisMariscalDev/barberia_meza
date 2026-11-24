@@ -4,7 +4,7 @@ import estilos from './Encabezado.module.css'
 const ENLACES = [
   { href: '#precios', texto: 'Precios' },
   { href: '#equipo', texto: 'Equipo' },
-  { href: '#trabajos', texto: 'Trabajos' },
+  { href: '#trabajos', texto: 'El local' },
   { href: '#resenas', texto: 'Reseñas' },
   { href: '#ubicacion', texto: 'Ubicación' },
 ]

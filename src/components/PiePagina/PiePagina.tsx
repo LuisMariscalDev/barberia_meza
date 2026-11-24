@@ -5,7 +5,7 @@ import estilos from './PiePagina.module.css'
 const ENLACES = [
   { href: '#precios', texto: 'Precios' },
   { href: '#equipo', texto: 'Equipo' },
-  { href: '#trabajos', texto: 'Trabajos' },
+  { href: '#trabajos', texto: 'El local' },
   { href: '#resenas', texto: 'Reseñas' },
   { href: '#ubicacion', texto: 'Ubicación' },
 ]
@@ -62,7 +62,7 @@ export function PiePagina() {
           <ul className={estilos.lista}>
             <li>
               <a className={estilos.enlace} href="#equipo" rel="noreferrer">
-                WhatsApp
+                Agendar
               </a>
             </li>
             <li>

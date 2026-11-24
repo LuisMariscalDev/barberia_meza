@@ -33,7 +33,7 @@ export function Precios() {
           </ul>
 
           <p className={estilos.pagos}>{NEGOCIO.formasPago}</p>
-          <p className={estilos.duracion}>{NEGOCIO.duracionAproximada}.</p>
+          <p className={estilos.duracion}>{NEGOCIO.duracionAproximada}</p>
         </div>
       </div>
     </section>

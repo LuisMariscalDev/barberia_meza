@@ -19,8 +19,7 @@ export function Resenas() {
             Lo que dicen <em>los clientes</em>.
           </h2>
           <p className={estilos.entrada}>
-            Las experiencias hablan por sí solas. Lee las opiniones en Google o
-            comparte la tuya después de tu visita.
+            Lee las opiniones en Google o comparte la tuya después de tu visita.
           </p>
           <a
             className={estilos.enlace}
