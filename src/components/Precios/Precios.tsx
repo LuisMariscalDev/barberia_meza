@@ -11,14 +11,10 @@ export function Precios() {
     >
       <div className={estilos.contenedor} data-revelar>
         <header className={estilos.cabecera}>
-          <p className={estilos.etiqueta}>01 — Precios</p>
+          <p className={estilos.etiqueta}>Precios</p>
           <h2 className={estilos.titulo} id="precios-titulo">
             Un solo precio. <em>Sin letras chiquitas.</em>
           </h2>
-          <p className={estilos.entrada}>
-            Corte, fade, barba o corte de niño. Pagas como quieras y cada
-            servicio dura alrededor de una hora.
-          </p>
         </header>
 
         <div className={estilos.tarjeta}>
@@ -37,9 +33,7 @@ export function Precios() {
           </ul>
 
           <p className={estilos.pagos}>{NEGOCIO.formasPago}</p>
-          <p className={estilos.duracion}>
-            {NEGOCIO.duracionAproximada} Precios en pesos mexicanos (MXN).
-          </p>
+          <p className={estilos.duracion}>{NEGOCIO.duracionAproximada}.</p>
         </div>
       </div>
     </section>

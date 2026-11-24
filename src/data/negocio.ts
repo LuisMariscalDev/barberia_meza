@@ -26,7 +26,7 @@ export const NEGOCIO: Negocio = {
     'Ideal para niños',
   ],
   descripcionPortada:
-    'Ulises en la mañana, José en la tarde. Elige a tu barbero y aparta tu lugar por WhatsApp.',
+    'Corte, fade o barba a $200. Mañana con Ulises, tarde con José.',
   horario: [
     {
       indice: 1,
@@ -162,5 +162,5 @@ export const NEGOCIO: Negocio = {
   avisoPrivacidad: '/aviso-de-privacidad',
 }
 
-export const MENSAJE_PREDETERMINADO =
-  'Hola, quiero agendar un corte en Barbería Meza (Real Ixtapa).'
+export const MENSAJE_PRIVACIDAD =
+  'Hola, tengo una consulta sobre mis datos personales.'

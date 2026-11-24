@@ -1,6 +1,4 @@
 import { useEffect, useRef, useState } from 'react'
-import { NEGOCIO, MENSAJE_PREDETERMINADO } from '../../data/negocio'
-import { crearEnlaceWhatsApp } from '../../lib/whatsapp'
 import estilos from './Encabezado.module.css'
 
 const ENLACES = [
@@ -14,7 +12,6 @@ const ENLACES = [
 export function Encabezado() {
   const [desplazado, setDesplazado] = useState(false)
   const referencia = useRef<HTMLElement>(null)
-  const whatsapp = crearEnlaceWhatsApp(NEGOCIO.telefono, MENSAJE_PREDETERMINADO)
 
   useEffect(() => {
     let cuadro: number | null = null
@@ -97,12 +94,7 @@ export function Encabezado() {
             ))}
           </nav>
 
-          <a
-            className={estilos.agendar}
-            href={whatsapp}
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a className={estilos.agendar} href="#equipo" rel="noreferrer">
             Agendar
             <span aria-hidden="true">→</span>
           </a>

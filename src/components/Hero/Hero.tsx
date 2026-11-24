@@ -1,13 +1,11 @@
 import { useEffect, useRef } from 'react'
-import { NEGOCIO, MENSAJE_PREDETERMINADO } from '../../data/negocio'
+import { NEGOCIO } from '../../data/negocio'
 import { formatearPrecio } from '../../lib/formato'
 import { describirHorario, obtenerDiaActual } from '../../lib/horario'
-import { crearEnlaceWhatsApp } from '../../lib/whatsapp'
 import estilos from './Hero.module.css'
 
 export function Hero() {
   const referencia = useRef<HTMLElement>(null)
-  const whatsapp = crearEnlaceWhatsApp(NEGOCIO.telefono, MENSAJE_PREDETERMINADO)
   const horarioHoy = obtenerDiaActual(NEGOCIO.horario)
   const precio =
     NEGOCIO.precioCorte === null ? null : formatearPrecio(NEGOCIO.precioCorte)
@@ -105,21 +103,16 @@ export function Hero() {
             <div className={estilos.acciones}>
               <a
                 className={estilos.botonPrimario}
-                href={whatsapp}
-                target="_blank"
+                href="#equipo"
                 rel="noreferrer"
               >
-                Agendar por WhatsApp
+                Elige a tu barbero
                 <span aria-hidden="true">→</span>
               </a>
-              <a className={estilos.botonSecundario} href="#equipo">
-                Conocer a los barberos
+              <a className={estilos.botonSecundario} href="#precios">
+                Ver precios
               </a>
             </div>
-
-            <p className={estilos.nota}>
-              Sin cuenta, sin descargas, sin llamadas.
-            </p>
           </div>
 
           <div className={estilos.boletaFlotante}>
@@ -146,7 +139,7 @@ export function Hero() {
                 )}
               </p>
 
-              <p className={estilos.boletaServicio}>Corte clásico</p>
+              <p className={estilos.boletaServicio}>Todos los servicios</p>
 
               <div className={estilos.boletaDivisor} aria-hidden="true" />
 
@@ -162,8 +155,6 @@ export function Hero() {
                   </dd>
                 </div>
               </dl>
-
-              <p className={estilos.boletaNota}>Agenda por WhatsApp</p>
             </aside>
           </div>
         </div>

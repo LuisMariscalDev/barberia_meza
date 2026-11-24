@@ -14,13 +14,13 @@ export function Resenas() {
     >
       <div className={estilos.contenedor} data-revelar>
         <div className={estilos.texto}>
-          <p className={estilos.etiqueta}>04 — Reseñas</p>
+          <p className={estilos.etiqueta}>Reseñas</p>
           <h2 className={estilos.titulo} id="resenas-titulo">
-            Búscanos <em>en Google</em>.
+            Lo que dicen <em>los clientes</em>.
           </h2>
           <p className={estilos.entrada}>
-            Las reseñas las escriben los clientes, no nosotros. Entra a leerlas
-            o deja la tuya después del corte.
+            Las experiencias hablan por sí solas. Lee las opiniones en Google o
+            comparte la tuya después de tu visita.
           </p>
           <a
             className={estilos.enlace}
