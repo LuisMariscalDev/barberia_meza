@@ -9,7 +9,7 @@
 .pista {
   display: flex;
   width: max-content;
-  animation: desfilar 38s linear infinite;
+  animation: desfilar 120s linear infinite; /* los 120s son 2 minutos, que es el tiempo que tarda en dar una vuelta completa */
 }
 
 .grupo {
