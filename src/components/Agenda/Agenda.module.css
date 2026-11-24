@@ -131,10 +131,3 @@
   border-color: var(--color-carbon);
   color: var(--color-crema-claro);
 }
-
-@media (min-width: 560px) {
-  .acciones {
-    grid-template-columns: 1fr 1fr;
-    max-width: 560px;
-  }
-}

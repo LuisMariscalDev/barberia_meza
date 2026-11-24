@@ -11,13 +11,12 @@ export function Barberos() {
     >
       <div className={estilos.contenedor} data-revelar>
         <header className={estilos.cabecera}>
-          <p className={estilos.etiqueta}>02 — El equipo</p>
+          <p className={estilos.etiqueta}>El equipo</p>
           <h2 className={estilos.titulo} id="barberos-titulo">
             Escríbele <em>directo</em> a tu barbero.
           </h2>
           <p className={estilos.entrada}>
-            Cada barbero tiene su turno. Escríbele por WhatsApp y te contesta
-            él, no un contestador.
+            Cada barbero tiene su turno. Escríbele al tuyo.
           </p>
         </header>
 

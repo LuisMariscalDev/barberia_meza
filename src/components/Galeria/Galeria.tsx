@@ -10,14 +10,10 @@ export function Galeria() {
     >
       <div className={estilos.contenedor} data-revelar>
         <header className={estilos.cabecera}>
-          <p className={estilos.etiqueta}>03 — Trabajos</p>
+          <p className={estilos.etiqueta}>El local</p>
           <h2 className={estilos.titulo} id="galeria-titulo">
-            Hecho aquí, <em>a mano</em>.
+            Aquí te <em>atendemos</em>.
           </h2>
-          <p className={estilos.entrada}>
-            El taller, las sillas y el espejo donde se hace cada corte. Sin
-            banco de imágenes.
-          </p>
         </header>
 
         <ul className={estilos.grid}>

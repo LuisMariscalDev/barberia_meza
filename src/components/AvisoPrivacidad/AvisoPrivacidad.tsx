@@ -1,10 +1,10 @@
 import { useEffect } from 'react'
-import { NEGOCIO, MENSAJE_PREDETERMINADO } from '../../data/negocio'
+import { NEGOCIO, MENSAJE_PRIVACIDAD } from '../../data/negocio'
 import { crearEnlaceWhatsApp } from '../../lib/whatsapp'
 import estilos from './AvisoPrivacidad.module.css'
 
 export function AvisoPrivacidad() {
-  const whatsapp = crearEnlaceWhatsApp(NEGOCIO.telefono, MENSAJE_PREDETERMINADO)
+  const whatsapp = crearEnlaceWhatsApp(NEGOCIO.telefono, MENSAJE_PRIVACIDAD)
 
   useEffect(() => {
     const tituloAnterior = document.title
@@ -74,7 +74,7 @@ export function AvisoPrivacidad() {
         </h2>
         <p>
           Escríbenos por WhatsApp y dinos qué quieres consultar, corregir o
-          borrar. Te contestamos por el mismo chat.
+          borrar.
         </p>
 
         <p className={estilos.acciones}>
@@ -90,7 +90,7 @@ export function AvisoPrivacidad() {
         </p>
 
         <p className={estilos.fecha}>
-          Última actualización: 19 de noviembre de 2026.
+          Última actualización: 23 de noviembre de 2026.
         </p>
       </main>
 

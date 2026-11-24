@@ -1,10 +1,6 @@
-import { NEGOCIO, MENSAJE_PREDETERMINADO } from '../../data/negocio'
-import { crearEnlaceWhatsApp } from '../../lib/whatsapp'
 import estilos from './Agenda.module.css'
 
 export function Agenda() {
-  const whatsapp = crearEnlaceWhatsApp(NEGOCIO.telefono, MENSAJE_PREDETERMINADO)
-
   return (
     <section
       className={estilos.seccion}
@@ -19,24 +15,15 @@ export function Agenda() {
       <div className={estilos.contenedor} data-revelar>
         <p className={estilos.etiqueta}>Agenda</p>
         <h2 className={estilos.titulo} id="agenda-titulo">
-          Aparta <em>tu lugar</em>.
+          Tu próximo corte empieza <em>aquí</em>.
         </h2>
         <p className={estilos.entrada}>
-          Escríbenos por WhatsApp y dinos a qué hora pasas. Te confirmamos por
-          el mismo chat.
+          Elige a tu barbero y acuerda directamente con él el día y la hora de
+          tu visita.
         </p>
 
         <div className={estilos.acciones}>
-          <a
-            className={estilos.boton}
-            href={whatsapp}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Agendar por WhatsApp
-            <span aria-hidden="true">→</span>
-          </a>
-          <a className={estilos.botonSecundario} href="#equipo">
+          <a className={estilos.boton} href="#equipo">
             Conocer a los barberos
           </a>
         </div>

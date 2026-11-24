@@ -6,16 +6,17 @@ import type { Negocio } from '../types/negocio'
 // propio, agregarlo en `barberos[].telefono`.
 export const NEGOCIO: Negocio = {
   nombre: 'Barbería Meza',
-  ciudad: 'Las Juntas',
-  colonia: 'Real Ixtapa',
+  ciudad: 'Puerto Vallarta',
+  colonia: 'Ixtapa',
   estado: 'Jalisco',
   codigoPostal: '48280',
   precioCorte: 200,
   moneda: 'MXN',
   telefono: '523221752714',
   direccion: 'C. Paseo de la Industria 1325-A',
-  enlaceMapa: 'https://maps.google.com/?cid=0x1fb017eed7b82e5',
-  enlaceResenas: 'https://www.google.com/maps?cid=0x1fb017eed7b82e5',
+  enlaceMapa: 'https://www.google.com/maps?cid=142709457854104293',
+  enlaceResenas:
+    'https://www.google.com/maps/place/Barber%C3%ADa+MEZA+%7C+Cortes+de+Cabello+y+Barba./@20.7155892,-105.2225959,17z/data=!4m18!1m9!3m8!1s0x8421470039d990a5:0x1fb017eed7b82e5!2sBarber%C3%ADa+MEZA+%7C+Cortes+de+Cabello+y+Barba.!8m2!3d20.7155892!4d-105.220021!9m1!1b1!16s%2Fg%2F11xnlpq2_g!3m7!1s0x8421470039d990a5:0x1fb017eed7b82e5!8m2!3d20.7155892!4d-105.220021!9m1!1b1!16s%2Fg%2F11xnlpq2_g',
   calificacion: 4.7,
   resenas: 13,
   etiquetasResenas: [
@@ -25,7 +26,7 @@ export const NEGOCIO: Negocio = {
     'Ideal para niños',
   ],
   descripcionPortada:
-    'Ulises en la mañana, José en la tarde. Elige a tu barbero y aparta tu lugar por WhatsApp.',
+    'Corte, fade o barba a $200. Mañana con Ulises, tarde con José.',
   horario: [
     {
       indice: 1,
@@ -161,5 +162,5 @@ export const NEGOCIO: Negocio = {
   avisoPrivacidad: '/aviso-de-privacidad',
 }
 
-export const MENSAJE_PREDETERMINADO =
-  'Hola, quiero agendar un corte en Barbería Meza (Real Ixtapa).'
+export const MENSAJE_PRIVACIDAD =
+  'Hola, tengo una consulta sobre mis datos personales.'
